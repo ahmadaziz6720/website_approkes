@@ -3,6 +3,8 @@ hilangkan("form");
 hilangkan("edit");
 hilangkan("notAvailable");
 
+munculkan("realtime");
+
 function munculkan(id){
     var elem = document.getElementById(id);
     if (elem.style.display === "none") {
