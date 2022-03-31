@@ -28,3 +28,11 @@ function getData(){
         document.getElementById("Temperature").innerHTML = Temperature;
     });
 }
+
+
+function updateRules() {
+    firebase.database().ref("/").child("rules").update({
+        Capacity: document.getElementById("capacity").value,
+        MaxTemp : document.getElementById("maxtmp").value
+    })
+}
