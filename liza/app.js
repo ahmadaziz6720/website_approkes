@@ -11,6 +11,7 @@ const firebaseConfig = {
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+function getData(){
     firebase.database().ref('/test').once('value').then(function (snapshot) {
         var Distance = snapshot.val().Distance;
         var IR_HS = snapshot.val().IR_HS;
@@ -25,5 +26,5 @@ firebase.initializeApp(firebaseConfig);
         document.getElementById("People").innerHTML = People;
         document.getElementById("State").innerHTML = State;
         document.getElementById("Temperature").innerHTML = Temperature;
-    })
+    });
 }
