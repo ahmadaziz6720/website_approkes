@@ -8,9 +8,12 @@
 
 
 <body onload="javascript:getData()">
-    <p>float: <strong id="float"></strong></p>
-    <p>int: <strong id="int"></strong></p>
-    <p>string: <strong id="string"></strong></p>
+    <p>State: <strong id="state"></strong></p>
+    <p>Distance: <strong id="distance"></strong></p>
+    <p>IR_HS: <strong id="ir_hs"></strong></p>
+    <p>IR_OUT: <strong id="ir_out"></strong></p>
+    <p>People: <strong id="people"></strong></p>
+    <p>Temperature: <strong id="tmp"></strong></p>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
@@ -18,20 +21,6 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
 
-    <script>
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyABTMahcC3vLi7MvSOj04RqMBb1p-rFj-8",
-        authDomain: "approkes-89937.firebaseapp.com",
-        databaseURL: "https://approkes-89937-default-rtdb.firebaseio.com",
-        projectId: "approkes-89937",
-        storageBucket: "approkes-89937.appspot.com",
-        messagingSenderId: "1053571501098",
-        appId: "1:1053571501098:web:973d9d46b2d659174dc753"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
     <script src="app.js"></script>
 </body>
 
