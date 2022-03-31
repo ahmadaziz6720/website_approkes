@@ -59,8 +59,7 @@ function updateRules() {
     document.getElementById("capacity2").innerHTML = capacity;
     document.getElementById("max_tmp2").innerHTML = max_tmp;
 }
-
-function getData(){
+setInterval(function getData(){
     firebase.database().ref("/Dashboard").once('value').then(function (snapshot) {
         var ActiveGate = snapshot.val().ActiveGate;
         var NoMask = snapshot.val().NoMask;
@@ -76,4 +75,4 @@ function getData(){
         document.getElementById("PeopleEntered").innerHTML = PeopleEntered;
         document.getElementById("PeopleOut").innerHTML = PeopleOut;
     });
-}
+}, 1000);
