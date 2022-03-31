@@ -59,3 +59,21 @@ function updateRules() {
     document.getElementById("capacity2").innerHTML = capacity;
     document.getElementById("max_tmp2").innerHTML = max_tmp;
 }
+
+function getData(){
+    firebase.database().ref("/Dashboard").once('value').then(function (snapshot) {
+        var ActiveGate = snapshot.val().ActiveGate;
+        var NoMask = snapshot.val().NoMask;
+        var OverTemperature = snapshot.val().OverTemperature;
+        var People = snapshot.val().People;
+        var PeopleEntered = snapshot.val().PeopleEntered;
+        var PeopleOut = snapshot.val().PeopleOut;
+
+        document.getElementById("ActiveGate").innerHTML = ActiveGate;
+        document.getElementById("NoMask").innerHTML = NoMask;
+        document.getElementById("OverTemperature").innerHTML = OverTemperature;
+        document.getElementById("People").innerHTML = People;
+        document.getElementById("PeopleEntered").innerHTML = PeopleEntered;
+        document.getElementById("PeopleOut").innerHTML = PeopleOut;
+    });
+}
