@@ -172,15 +172,15 @@
                         <h5>Insert Rules</h5>
                         <form>
                             <div class="mb-3">
-                                <label class="form-label">Max People</label>
-                                <input type="text" class="form-control" id="people">
+                                <label class="form-label">Capacity</label>
+                                <input type="text" class="form-control" id="capacity">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Max Body Temperature</label>
-                                <input type="text" class="form-control" id="tmp" aria-describedby="tmpHelp">
+                                <input type="text" class="form-control" id="max_tmp" aria-describedby="tmpHelp">
                                 <div id="tmpHelp" class="form-text">In degrees celsius</div>
                             </div>
-                            <button type="button" class="btn btn-primary" onclick="kirim()">Save</button>
+                            <button type="button" class="btn btn-primary" onclick="updateRules()">Save</button>
                         </form>
                     </div>
 
@@ -188,12 +188,12 @@
                     <div id="rules">
                         <table class="table table-borderless">
                             <tr>
-                                <td>Max People</td>
-                                <td id="people2"></td>
+                                <td>Capacity</td>
+                                <td id="capacity2"></td>
                             </tr>
                             <tr>
                                 <td>Max Body Temperature</td>
-                                <td id="tmp2"></td>
+                                <td id="max_tmp2"></td>
                             </tr>
                         </table>                        
                     </div>
@@ -214,6 +214,12 @@
     </footer>
 
     <!-- JAVA SCRIPT -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
     <script src="js/main.js"></script>
 </body>
 </html>
